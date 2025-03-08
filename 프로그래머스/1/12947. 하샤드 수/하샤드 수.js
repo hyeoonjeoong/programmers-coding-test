@@ -1,6 +1,4 @@
-function solution(x) {
-    var answer = true;
-    
+function solution(x) {    
     let sum = String(x)
               .split('')
               .map(Number)
