@@ -1,6 +1,6 @@
 function solution(s, skip, index) {
     let toAscii = toChangeAscii(s);
-    let skipAscii = new Set (toChangeAscii(skip));
+    let skipAscii = toChangeAscii(skip);
     let resultAscii = [];
 
     for(let i = 0; i < toAscii.length; i++){
@@ -11,7 +11,7 @@ function solution(s, skip, index) {
             temp ++;
             if(temp > 122) temp = 97;
             
-            if(!skipAscii.has(temp)){
+            if(!skipAscii.includes(temp)){
                 moved ++;
             }
         }
