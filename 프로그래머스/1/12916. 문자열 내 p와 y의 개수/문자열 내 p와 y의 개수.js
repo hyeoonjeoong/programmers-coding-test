@@ -1,8 +1,4 @@
 function solution(s){
-    var answer = true;
-    
-    let formattedString = s.toLowerCase()
-    answer = formattedString.split('p').length === formattedString.split('y').length
-    
-    return answer
+    const lower = s.toLowerCase();
+    return lower.split('p').length === lower.split('y').length
 }
