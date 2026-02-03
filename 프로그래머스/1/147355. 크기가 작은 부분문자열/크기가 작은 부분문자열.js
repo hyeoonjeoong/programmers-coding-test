@@ -1,14 +1,10 @@
 function solution(t, p) {
-    let pLength = p.length;
-    let target = Number(p);
+    const chop = p.length;
     let count = 0;
     
-    for(let i=0; i<=t.length - pLength; i++){
-        let sliced = t.slice(i, i + pLength);
-        
-        if(Number(sliced) <= target){
-            count ++;
-        }
+    for(let i = 0; i <= t.length - chop; i++){
+        const str = t.slice(i, i + chop);
+        if(str <= p) count ++;
     }
-    return count;   
+    return count;
 }
