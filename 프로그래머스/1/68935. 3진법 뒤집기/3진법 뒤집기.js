@@ -1,6 +1,4 @@
 function solution(n) {
-    let to3 = n.toString(3);
-    let reverse = [...to3].reverse().join('');
-    
-    return parseInt(reverse, 3)
+    const reversed3 = n.toString(3).split('').reverse().join('');    
+    return parseInt(reversed3, 3)
 }
