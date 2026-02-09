@@ -1,17 +1,18 @@
 function solution(s) {
-    let sArr = [...s];
-    let obj = {};
+    const answer = [];
+    const lastIndex = {};
     
-    let answer = sArr.map((el, i)=> {
-        if(obj[el] === undefined){
-            obj[el] = i;
-            return -1;
-        }else {
-            const distance = i - obj[el];
-            obj[el] = i;
-            return distance;
+    for(let i = 0; i < s.length; i++){
+        const char = s[i];
+        
+        if(lastIndex[char] === undefined){
+            answer.push(-1);
+        } else {
+            answer.push(i - lastIndex[char])
         }
-    })
+        
+        lastIndex[char] = i;
+    }
     
     return answer;
 }
