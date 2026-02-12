@@ -1,8 +1,12 @@
 function solution(food) {
-    var answer = '';
-    for (let i = 0; i<food.length; i++){
-        let count = Math.floor(food[i] / 2);
-        answer += String(i).repeat(count)
+    let left = '';
+    
+    for(let i = 1; i < food.length; i++){
+        const count = Math.floor(food[i]/2)
+        left += String(i).repeat(count);
     }
-    return answer + '0' + [...answer].reverse().join('')
+    
+    const right = [...left].reverse().join("");
+    
+    return left + "0" + right;
 }
