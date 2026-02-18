@@ -4,12 +4,10 @@ function solution(s) {
         "four": "4", "five": "5", "six": "6", "seven": "7",
         "eight": "8", "nine": "9"
     };
-    
-    for(const str of Object.keys(numWord)){
-        s = s.replaceAll(str, numWord[str])
-    }
-    
-    return Number(s);
+
+    return Number(
+        s.replace(/zero|one|two|three|four|five|six|seven|eight|nine/g, (str) => numWord[str])
+    )
 }
 
     
