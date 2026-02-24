@@ -1,12 +1,13 @@
 function solution(a, b, n) {
-    let result = 0;
+    let answer = 0;
     
-    while(a <= n){
-        let give = Math.floor(n/a) * a;
-        let get = Math.floor(give/a) * b;
+    while(n >= a){
+        const changed = Math.floor(n / a);
+        const newCoke = changed * b;
+        const remain = n % a;
         
-        result += get;
-        n = (n - give) + get;
+        answer += newCoke;
+        n = remain + newCoke; 
     }
-    return result;
+    return answer;
 }
