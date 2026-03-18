@@ -1,7 +1,7 @@
 function solution(nums) {
-    let pick = nums.length / 2;
-    let monsterList = new Set(nums).size;
     
-    let result = pick > monsterList ? monsterList : pick;
-    return result;
+    let pick = nums.length / 2;
+    let list = new Set(nums).size;
+    
+    return Math.min(pick, list)
 }
