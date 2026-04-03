@@ -4,9 +4,8 @@ function solution(participant, completion) {
     participant.forEach((el) => {
         obj[el] = (obj[el] || 0) + 1;
     })
-    
     completion.forEach((el) => {
-        obj[el] = obj[el] - 1;
+        obj[el] -= 1;
     })
     
     for (let name in obj){
